@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+
+main, header {
+    margin: 32px;
+}
+
+.main-header {
+    margin: 0 32px 0 32px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-article {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-logo {
+    height: 60px;
+    width: 60px;
+    margin: 16px 0;
+    background-image: url(https://picsum.photos/200);
+    background-position: center;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    align-content: center;
+}
+
+.main-article-header {
+    text-align: center;
+}
+
+.container-banner {
+    flex: 1;
+}
+
+.banner-autoslide {
+    height: 250px;
+    border: 1px solid black;
+    background-image: url(https://picsum.photos/500);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.contact-us {
+    height: 100vh;
+    align-content: center;
+}
+
+.our-package-header {
+    text-align: center;
+}
+
+.our-package-content {
+    text-align: center;
+}
+
+.call-us {
+    height: 100vh;
+    align-content: center;
+}
+
+.call-us-header {
+    text-align: center;
+}
+
+.call-us-content {
+    text-align: center;
+}
+
+footer {
+    justify-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 30px;
+    background-image: url(https://picsum.photos/200);
+    background-position: center;
+    border-radius: 50%;
+}
