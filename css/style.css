@@ -183,7 +183,10 @@ select {
     cursor: pointer;
 }
 
+/* Our Package Section */
 .our-package-header {
+    background-color: #F3C623;
+    padding: 24px 0;
     text-align: center;
 }
 
@@ -205,8 +208,14 @@ select {
 }
 
 footer {
+    padding: 16px 0 ;
+    background-color: #10375C;
     justify-items: center;
     text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
 
 .footer-logo {
@@ -215,4 +224,14 @@ footer {
     background-image: url(https://picsum.photos/200);
     background-position: center;
     border-radius: 50%;
+}
+
+.footer-description {
+    width: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-description a {
+    text-decoration: none;
 }
