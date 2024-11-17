@@ -17,8 +17,6 @@
             </nav>
         </header>
 
-        <hr />
-
         <main>
             <header class="main-article-header">
                 <h1>Your Trusted travel Agent</h1>
@@ -36,7 +34,23 @@
 
                 <!-- Contact Us -->
                 <section class="contact-us">
-                    <h1>Form Contact us</h1>
+                    <h4>Contact Us</h4>
+                    <p>Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>
+
+                    <form action="" method="post">
+                        <label for="name">Your Name</label><br />
+                        <input id="name" name="fullname" type="text" class="text-normal" placeholder="Full Name" required>
+                        <label for="email">Email Address</label><br />
+                        <input id="email" name="emailaddress" type="text" class="text-normal" placeholder="example@email.com" required>
+                        <label for="interest">What are you interested in?</label><br />
+                        <select id="interest" name="interests" class="text-normal" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Traveling">Traveling</option>
+                            <option value="Hiking">Hiking</option>
+                            <option value="Camping">Camping</option>
+                        </select>
+                        <button type="submit"></button>
+                    </form>
                 </section>
             </article>
 
@@ -72,5 +86,7 @@
             </div>
             <p>&copy 2024</p>
         </footer>
+
+        <script src="/js/script.js"></script>
     </body>
 </html>
