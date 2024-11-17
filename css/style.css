@@ -5,7 +5,7 @@ body {
     background-color: #F4F6FF;
 }
 
-main, header {
+main {
     padding: 0 128px;
 }
 
@@ -42,20 +42,23 @@ main, header {
 }
 
 .main-header {
-    padding: 0 64px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     background-color: #F3C623;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.main-header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
-.main-logo {
-    height: 40px;
-    width: 80px;
-    margin: 16px 0;
-    background-image: url(https://picsum.photos/200);
-    background-position: center;
-    border-radius: 50%;
+.navbar {
+    max-width: 100%;
+    padding: 8px 64px;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav {
@@ -76,7 +79,6 @@ nav a {
 }
 
 .main-article {
-    height: 90vh;
     padding: 32px 0;
     display: flex;
     justify-content: space-between;
