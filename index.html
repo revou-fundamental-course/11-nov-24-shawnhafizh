@@ -10,10 +10,10 @@
         <header class="main-header">
             <div class="main-logo">
             </div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#our-package">Our Package</a>
-                <a href="#call-us">Call Us</a>
+            <nav class="text-bold">
+                <a class="text-black" href="#home">Home</a>
+                <a class="text-black" href="#our-package">Our Package</a>
+                <a class="text-black" href="#call-us">Call Us</a>
             </nav>
         </header>
 
@@ -27,29 +27,40 @@
             <article id="home" class="main-article">
 
                 <!-- Banner Autoslide -->
-                <section class="container-banner">
+                <section class="banner-container">
                     <div class="banner-autoslide"></div>
-                    <p>Lorem ipsum dolor dolor...</p>
+                    <div class="banner-review">
+                        <p class="text-base text-italic">"Liburan menjadi menyenangkan bersama travel agentku."</p>
+                        <div class="banner-review-profile">
+                            <div class="profile-picture"></div>
+                            <div class="profile-details">
+                                <p class="text-bold">Ivan Gunawan</p>
+                                <p class="text-italic">Bapak Rumah Tangga, 48</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Contact Us -->
                 <section class="contact-us">
-                    <h4>Contact Us</h4>
-                    <p>Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>
+                    <div>
+                        <p class="text-lg text-bold">Contact Us</p>
+                        <p class="text-sm">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>                        
+                    </div>
 
                     <form action="" method="post">
-                        <label for="name">Your Name</label><br />
-                        <input id="name" name="fullname" type="text" class="text-normal" placeholder="Full Name" required>
-                        <label for="email">Email Address</label><br />
-                        <input id="email" name="emailaddress" type="text" class="text-normal" placeholder="example@email.com" required>
-                        <label for="interest">What are you interested in?</label><br />
-                        <select id="interest" name="interests" class="text-normal" required>
+                        <label for="name" class="text-sm text-bold">Your Name</label>
+                        <input id="name" name="fullname" type="text" placeholder="Full Name" class="font-family" required>
+                        <label for="email" class="text-sm text-bold">Email Address</label>
+                        <input id="email" name="emailaddress" type="text" placeholder="example@email.com" class="font-family" required>
+                        <label for="interest" class="text-sm text-bold">What are you interested in?</label>
+                        <select id="interest" name="interests" class="font-family" required>
                             <option value="" disabled selected>Select an option</option>
                             <option value="Traveling">Traveling</option>
                             <option value="Hiking">Hiking</option>
                             <option value="Camping">Camping</option>
                         </select>
-                        <button type="submit"></button>
+                        <button type="submit" class="btn-submit text-sm text-bold text-white">Send</button>
                     </form>
                 </section>
             </article>

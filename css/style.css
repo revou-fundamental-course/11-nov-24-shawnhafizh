@@ -1,27 +1,48 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     background-color: #F4F6FF;
 }
 
 main, header {
-    padding: 0 32px 0 32px;
+    padding: 0 128px;
 }
 
-.text-normal {
-    font-family: sans-serif;
-    font-size: 14px;
+.font-family {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.text-sm {
+    font-size: 16px;
+}
+
+.text-base {
+    font-size: 18px;
+}
+
+.text-lg {
+    font-size: 24px;
 }
 
 .text-bold {
-    font-family: sans-serif;
-    font-size: 14px;
     font-weight: bold;
 }
 
+.text-italic {
+    font-style: italic;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
 .main-header {
-    padding: 0 32px 0 32px;
+    padding: 0 64px;
     display: flex;
     justify-content: space-between;
     background-color: #F3C623;
@@ -38,14 +59,13 @@ main, header {
 }
 
 nav {
+    width: 25%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 nav a {
-    padding: 10px;
-    color: black;
-    font-weight: bold;
     text-decoration: none;
     align-content: center;
 }
@@ -56,52 +76,89 @@ nav a {
 }
 
 .main-article {
-    height: 80vh;
-    padding: 32px;
+    height: 90vh;
+    padding: 32px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.container-banner {
-    flex: 1;
+/* Banner Section */
+.banner-container {
+    width: 60%;
+    background-color: #d0d0d0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .banner-autoslide {
     height: 250px;
-    border: 1px solid black;
+    border-radius: 10px;
     background-image: url(https://picsum.photos/500);
     background-position: center;
     background-size: cover;
-
 }
 
+.banner-review {
+    padding: 32px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner-review-profile {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    background-image: url(https://picsum.photos/200);
+    border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-details p{
+    margin: 0;
+}
+
+/* Contact Us Section */
 .contact-us {
     width: 30%;
     padding: 32px;
+    display: flex;
+    flex-direction: column;
     background-color: #d0d0d0;
     border-radius: 10px;
 }
 
-label {
-    font-size: 14px;
-    font-weight: bold;
+.contact-us p {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-    width: 100%;
+    max-width: 100%;
     height: 30px;
-    padding: 0;
+    padding-left: 10px;
     margin-top: 8px;
     margin-bottom: 16px;
     border: 1px solid grey;
     border-radius: 4px;
-}
-
-input[type="text" i] {
-    padding-left: 10px !important;
-    padding-block: 0;
-    padding-inline: 0;
-    font-style: italic;
 }
 
 select {
@@ -112,6 +169,16 @@ select {
     margin-bottom: 16px;
     border: 1px solid grey;
     border-radius: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    background-color: #10375C;
+    border: 1px solid #10375C;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .our-package-header {
