@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LUGGA!O</title>
+        <title>LUGGAG!O</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-zR2Th8I/QNVl6CxnAg3MkEsOyRomlQd1RHn58D/47VDzcbcjbEoQV+p774eCASANeu4ehXYlP/6hCk/ABLCkDP+1581f" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header class="main-header">
@@ -22,8 +23,8 @@
 
         <main>
             <header class="main-article-header">
-                <h1>Your Trusted Travel Agent's</h1>
-                <p>Your happiness is our happiness</p>
+                <p class="h1 text-bold">Your Trusted Travel Agent's</h1>
+                <p class="text-base">Your happiness is our happiness</p>
             </header>
 
             <!-- Home -->
@@ -47,7 +48,7 @@
                 </section>
 
                 <!-- Contact Us -->
-                <section class="contact-us">
+                <section class="contact-us-container">
                     <div>
                         <p class="text-lg text-bold">Contact Us</p>
                         <p class="text-sm">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>                        
@@ -71,19 +72,19 @@
             </article>
 
             <!-- Our Package -->
-            <article id="our-package">
+            <article id="our-package" class="our-package-article">
                 <header class="our-package-header">
-                    <h1>Our Package</h1>
+                    <p class="h3 text-bold">Our Package</p>
                 </header>
 
                 <!-- Our Package Content -->
                 <section class="our-package-content">
-                    <h1>Our Package Content</h1>
+                    <ul id="destinationList"></ul>
                 </section>
             </article>
 
             <!-- Call Us -->
-            <article id="call-us">
+            <article id="call-us" class="call-us-article">
                 <header class="call-us-header">
                     <h1>Call Us</h1>
                 </header>
@@ -102,7 +103,7 @@
             </div>
             <p>&copy 2024</p>
         </footer>
-
+        <script src="https://kit.fontawesome.com/208618e2bd.js" crossorigin="anonymous"></script>
         <script src="/js/script.js"></script>
     </body>
 </html>
