@@ -251,17 +251,32 @@ select {
 }
 
 /* Call Us Section */
-.call-us {
-    height: 100vh;
+.call-us-article {
+    height: 50vh;
     align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .call-us-header {
+    width: 60%;
     text-align: center;
+    align-self: center;
+}
+
+.call-us-header p[class="h3 text-bold"] {
+    padding-bottom: 16px;
 }
 
 .call-us-content {
     text-align: center;
+}
+
+.call-us-content button {
+    width: 20%;
+    height: 50px;
+    margin: 0;
 }
 
 
