@@ -35,6 +35,46 @@ navLinks.forEach(link => {
   });
 });
 
+document.getElementById("validation-form").addEventListener("submit", function(event) {
+	let isValid = true;
+	
+	// Validate name input
+	const name = document.getElementById("name").value.trim();
+	const nameError = document.getElementById("name-error");
+	if (name === "") {
+		nameError.textContent = "Please enter your full name.";
+		isValid = false;
+	} else {
+		nameError.textContent = "";
+	}
+	
+	// Validate email input & pattern
+	const email = document.getElementById("email").value.trim();
+	const emailError = document.getElementById("email-error");
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	if (!emailPattern.test(email)) {
+		emailError.textContent = "Please enter a valid email address.";
+		isValid = false;
+	} else {
+		emailError.textContent = "";
+	}
+	
+	// Validate interest selection
+	const interest = document.getElementById("interest").value;
+	const interestError = document.getElementById("interest-error");
+	if (interest === "") {
+		interestError.textContent = "Please select an option.";
+		isValid = false;
+	} else {
+		interestError.textContent = "";
+	}
+	
+	// Prevent form submission if not valid
+	if (!isValid) {
+		event.preventDefault();
+	}
+});
+
 function renderDestinationList(destinations, containerId, itemTemplate) {
 	const destinationList = document.getElementById(containerId);
 

@@ -54,18 +54,24 @@
                         <p class="text-sm">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>                        
                     </div>
 
-                    <form action="" method="post">
+                    <form id="validation-form" action="" method="post">
                         <label for="name" class="text-sm text-bold">Your Name</label>
-                        <input id="name" name="fullname" type="text" placeholder="Full Name" class="font-family" required>
+                        <input id="name" name="fullname" type="text" placeholder="Full Name" class="font-family">
+                        <span id="name-error" class="error-message"></span>
+
                         <label for="email" class="text-sm text-bold">Email Address</label>
-                        <input id="email" name="emailaddress" type="text" placeholder="example@email.com" class="font-family" required>
+                        <input id="email" name="emailaddress" type="text" placeholder="example@email.com" class="font-family">
+                        <span id="email-error" class="error-message"></span>
+
                         <label for="interest" class="text-sm text-bold">What are you interested in?</label>
-                        <select id="interest" name="interests" class="font-family" required>
+                        <select id="interest" name="interests" class="font-family">
                             <option value="" disabled selected>Select an option</option>
                             <option value="Traveling">Traveling</option>
                             <option value="Hiking">Hiking</option>
                             <option value="Camping">Camping</option>
                         </select>
+                        <span id="interest-error" class="error-message"></span>
+
                         <button type="submit" class="btn-submit text-sm text-bold text-white">Send</button>
                     </form>
                 </section>
