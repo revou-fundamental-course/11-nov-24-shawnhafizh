@@ -1,5 +1,5 @@
 const navbar = document.querySelector('.main-header');
-const scrollThreshold = 65; // Adjust this value as needed
+const scrollThreshold = 65;
 
 const carouselData = [
     {
@@ -71,7 +71,6 @@ function updateCarousel() {
 
 	const profilePictureElement = document.querySelector(".profile-picture");
 	profilePictureElement.style.backgroundImage = `url('${currentItem.image}')`;
-
 }
 
 function nextSlide() {
