@@ -38,6 +38,10 @@ p {
     font-size: 24px;
 }
 
+.text-normal {
+    font-weight: normal;
+}
+
 .text-bold {
     font-weight: bold;
 }
@@ -87,7 +91,7 @@ nav a {
 }
 
 .main-article-header {
-    height: 40vh;
+    height: 30vh;
     text-align: center;
     align-content: center;
 }
@@ -95,32 +99,39 @@ nav a {
 
 /* Home Section */
 .main-article {
-    padding: 0 128px;
+    padding: 32px 128px;
     display: flex;
     justify-content: space-between;
 }
 
+.banner-offer-container {
+    width: 60%;
+}
+
 /* Banner Section */
 .banner-container {
-    width: 60%;
-    border-radius: 10px;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #c0c0c0;
 }
 
 .banner-autoslide {
-    height: 250px;
-    border-radius: 10px;
+    height: 70%;
+    border-radius: 5px;
     background-position: center;
     background-size: cover;
 }
 
 .banner-review {
-    padding: 32px;
+    height: 30%;
+    width: 90%;
+    padding: 32px 0;
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    align-self: center;
 }
 
 .banner-review-profile {
@@ -148,9 +159,16 @@ nav a {
     margin: 0;
 }
 
+.offer-container li {
+    margin-bottom: 8px;
+}
+
 /* Contact Us Section */
 .contact-us-container {
-    width: 30%;
+    width: 35%;
+}
+
+.contact-us-wrapper {
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -158,7 +176,7 @@ nav a {
     border-radius: 10px;
 }
 
-.contact-us-container p {
+.contact-us-wrapper p {
     margin: 0;
     margin-bottom: 8px;
 }

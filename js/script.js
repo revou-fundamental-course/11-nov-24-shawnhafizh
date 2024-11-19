@@ -34,20 +34,20 @@ const destinations = [
 	{ place: 'Yogyakarta', description: 'Travel dan wisata di Yogyakarta. Kunjungi cagar budaya dan kuliner menarik.' }
 ];
 
-function updateLogo() {
-	const darkThemeLogo = '/img/dark-theme-logo.png';
-	const lightThemeLogo = '/img/light-theme-logo.png';
+// function updateLogo() {
+// 	const darkThemeLogo = '/img/dark-theme-logo.png';
+// 	const lightThemeLogo = '/img/light-theme-logo.png';
 	
-	// Get the user's preferred color scheme
-	const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+// 	// Get the user's preferred color scheme
+// 	const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 	
-	// Update the favicon dynamically
-	const favicon = document.getElementById('title-logo');
-	favicon.href = isDarkMode ? darkThemeLogo : lightThemeLogo;
-}
+// 	// Update the favicon dynamically
+// 	const favicon = document.getElementById('title-logo');
+// 	favicon.href = isDarkMode ? darkThemeLogo : lightThemeLogo;
+// }
 
-updateLogo();
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
+// updateLogo();
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > scrollThreshold) {
@@ -97,10 +97,12 @@ updateCarousel();
 setInterval(nextSlide, 5000);
 
 document.getElementById("validation-form").addEventListener("submit", function(event) {
+	event.preventDefault();
+	
 	let isValid = true;
 	
 	// Validate name input
-	const name = document.getElementById("name").value.trim();
+	const name = document.getElementById("name-input").value.trim();
 	const nameError = document.getElementById("name-error");
 	if (name === "") {
 		nameError.textContent = "Please enter your full name.";
@@ -110,7 +112,7 @@ document.getElementById("validation-form").addEventListener("submit", function(e
 	}
 	
 	// Validate email input & pattern
-	const email = document.getElementById("email").value.trim();
+	const email = document.getElementById("email-input").value.trim();
 	const emailError = document.getElementById("email-error");
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	if (!emailPattern.test(email)) {
@@ -121,7 +123,7 @@ document.getElementById("validation-form").addEventListener("submit", function(e
 	}
 	
 	// Validate interest selection
-	const interest = document.getElementById("interest").value;
+	const interest = document.getElementById("interest-input").value;
 	const interestError = document.getElementById("interest-error");
 	if (interest === "") {
 		interestError.textContent = "Please select an option.";
@@ -132,8 +134,13 @@ document.getElementById("validation-form").addEventListener("submit", function(e
 	
 	// Prevent form submission if not valid
 	if (!isValid) {
-		event.preventDefault();
-	}
+        alert("Please correct the highlighted errors before submitting.");
+        console.log("Form submission blocked due to validation errors.");
+    } else {
+        alert("Form submitted successfully! Thank you for your input.");
+        console.log("Form submitted successfully!");
+		document.getElementById("validation-form").reset();
+    }
 });
 
 function renderDestinationList(destinations, containerId, itemTemplate) {

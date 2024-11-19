@@ -28,47 +28,72 @@
 
             <!-- Home Article -->
             <article id="home" class="main-article">
-                <!-- Banner Section -->
-                <section class="banner-container">
-                    <div class="banner-autoslide"></div>
-                    <div class="banner-review">
-                        <p id="review" class="text-base text-italic"></p>
-                        <div class="banner-review-profile">
-                            <div class="profile-picture"></div>
-                            <div class="profile-details">
-                                <p id="name" class="text-bold"></p>
-                                <p id="job-age" class="text-italic"></p>
+                <!-- Banner & Offer Section -->
+                <section class="banner-offer-container">
+                    <div class="banner-container">
+                        <div class="banner-autoslide"></div>
+                        <div class="banner-review">
+                            <p id="review" class="text-base text-italic"></p>
+                            <div class="banner-review-profile">
+                                <div class="profile-picture"></div>
+                                <div class="profile-details">
+                                    <p id="name" class="text-bold"></p>
+                                    <p id="job-age" class="text-italic"></p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="offer-container">
+                        <p class="text-lg text-bold">Discover Your Next Adventure with LUGGAG!O</p>
+                        <p class="text-sm">At LUGGAG!O, we don't just plan trips – we create unforgettable memories. Whether you're seeking a serene beach getaway, an exciting city adventure, or a cultural immersion, our services ensure a stress-free and enjoyable vacation experience.</p>
+                        <br>
+                        <p class="text-sm text-bold">Why Choose LUGGAG!O?</p>
+                        <ol>
+                            <li class="text-bold">
+                                <p class="text-sm">Stress-Free Travel Planning</p>
+                                <p class="text-sm text-normal">We handle every detail of your trip, from flights and accommodations to activities and transportation, so you can focus on enjoying your vacation without the hassle.</p>
+                            </li>
+                            <li class="text-bold">
+                                <p class="text-sm">Personalized Itineraries</p>
+                                <p class="text-sm text-normal">Our travel experts design trips tailored to your preferences, ensuring every experience aligns with your interests, style, and budget.</p>
+                            </li>
+                            <li class="text-bold">
+                                <p class="text-sm">24/7 Travel Support</p>
+                                <p class="text-sm text-normal">Enjoy peace of mind with our round-the-clock customer service, ready to assist you anytime during your journey, no matter where you are.</p>
+                            </li>
+                        </ol>
                     </div>
                 </section>
 
                 <!-- Contact Us Section -->
                 <section class="contact-us-container">
-                    <div>
-                        <p class="text-lg text-bold">Contact Us</p>
-                        <p class="text-sm">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>                        
+                    <div class="contact-us-wrapper">
+                        <div>
+                            <p class="text-lg text-bold">Contact Us</p>
+                            <p class="text-sm">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>                        
+                        </div>
+                        <form id="validation-form" action="" method="post" novalidate>
+                            <label for="name" class="text-sm text-bold">Your Name</label>
+                            <input id="name-input" name="fullname" type="text" placeholder="Full Name" class="font-family" required>
+                            <span id="name-error" class="error-message"></span>
+    
+                            <label for="email" class="text-sm text-bold">Email Address</label>
+                            <input id="email-input" name="emailaddress" type="text" placeholder="example@email.com" class="font-family" required>
+                            <span id="email-error" class="error-message"></span>
+    
+                            <label for="interest" class="text-sm text-bold">What are you interested in?</label>
+                            <select id="interest-input" name="interests" class="font-family" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Traveling">Traveling</option>
+                                <option value="Hiking">Hiking</option>
+                                <option value="Camping">Camping</option>
+                            </select>
+                            <span id="interest-error" class="error-message"></span>
+    
+                            <button type="submit" class="btn-submit text-sm text-bold text-white">Send</button>
+                        </form>
                     </div>
-                    <form id="validation-form" action="" method="post">
-                        <label for="name" class="text-sm text-bold">Your Name</label>
-                        <input id="name" name="fullname" type="text" placeholder="Full Name" class="font-family">
-                        <span id="name-error" class="error-message"></span>
-
-                        <label for="email" class="text-sm text-bold">Email Address</label>
-                        <input id="email" name="emailaddress" type="text" placeholder="example@email.com" class="font-family">
-                        <span id="email-error" class="error-message"></span>
-
-                        <label for="interest" class="text-sm text-bold">What are you interested in?</label>
-                        <select id="interest" name="interests" class="font-family">
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="Traveling">Traveling</option>
-                            <option value="Hiking">Hiking</option>
-                            <option value="Camping">Camping</option>
-                        </select>
-                        <span id="interest-error" class="error-message"></span>
-
-                        <button type="submit" class="btn-submit text-sm text-bold text-white">Send</button>
-                    </form>
                 </section>
             </article>
 
