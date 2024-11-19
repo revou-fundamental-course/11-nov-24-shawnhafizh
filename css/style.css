@@ -99,7 +99,8 @@ nav a {
 
 /* Home Section */
 .main-article {
-    padding: 32px 128px;
+    padding: 0 128px;
+    padding-bottom: 32px;
     display: flex;
     justify-content: space-between;
 }
