@@ -34,6 +34,21 @@ const destinations = [
 	{ place: 'Yogyakarta', description: 'Travel dan wisata di Yogyakarta. Kunjungi cagar budaya dan kuliner menarik.' }
 ];
 
+function updateLogo() {
+	const darkThemeLogo = '/img/dark-theme-logo.png';
+	const lightThemeLogo = '/img/light-theme-logo.png';
+	
+	// Get the user's preferred color scheme
+	const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	
+	// Update the favicon dynamically
+	const favicon = document.getElementById('title-logo');
+	favicon.href = isDarkMode ? darkThemeLogo : lightThemeLogo;
+}
+
+updateLogo();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
+
 window.addEventListener('scroll', () => {
 	if (window.scrollY > scrollThreshold) {
 		navbar.classList.add('fixed');
