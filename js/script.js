@@ -1,6 +1,4 @@
-const navbar = document.querySelector('.main-header');
-const scrollThreshold = 65;
-
+// Banner Data
 const carouselData = [
     {
         name: "Ivan Gunawan",
@@ -25,6 +23,7 @@ const carouselData = [
     }
 ];
 
+// Package Data
 const destinations = [
 	{ place: 'Bali', description: 'Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner menarik.' },
 	{ place: 'Jepang', description: 'Travel dan wisata di Jepang. Kunjungi cagar budaya dan kuliner menarik.' },
@@ -32,22 +31,11 @@ const destinations = [
 	{ place: 'Bandung', description: 'Travel dan wisata di Bandung. Kunjungi cagar budaya dan kuliner menarik.' },
 	{ place: 'Surabaya', description: 'Travel dan wisata di Surabaya. Kunjungi cagar budaya dan kuliner menarik.' },
 	{ place: 'Yogyakarta', description: 'Travel dan wisata di Yogyakarta. Kunjungi cagar budaya dan kuliner menarik.' }
-];
+];w.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
 
-// function updateLogo() {
-// 	const darkThemeLogo = '/img/dark-theme-logo.png';
-// 	const lightThemeLogo = '/img/light-theme-logo.png';
-	
-// 	// Get the user's preferred color scheme
-// 	const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-	
-// 	// Update the favicon dynamically
-// 	const favicon = document.getElementById('title-logo');
-// 	favicon.href = isDarkMode ? darkThemeLogo : lightThemeLogo;
-// }
-
-// updateLogo();
-// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
+// Set navbar 'fixed' when scrolled off screen
+const navbar = document.querySelector('.main-header');
+const scrollThreshold = 65;
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > scrollThreshold) {
@@ -57,6 +45,7 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+// Scroll Behavior Function
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
@@ -73,10 +62,12 @@ navLinks.forEach(link => {
   });
 });
 
+// Banner Autoslide Function
 let currentIndex = 0;
 function updateCarousel() {
     const currentItem = carouselData[currentIndex];
 
+	// Get Reviewer Data
 	document.getElementById("review").textContent = `"${currentItem.review}"`;
 	document.getElementById("name").textContent = currentItem.name;
 	document.getElementById("job-age").textContent = `${currentItem.job}, ${currentItem.age}`;
@@ -88,14 +79,17 @@ function updateCarousel() {
 	profilePictureElement.style.backgroundImage = `url('${currentItem.image}')`;
 }
 
+// Set Banner Item Index
 function nextSlide() {
     currentIndex = (currentIndex + 1) % carouselData.length;
     updateCarousel();
 }
 
+// Run Banner Autoslide Function
 updateCarousel();
 setInterval(nextSlide, 5000);
 
+// Validation Form
 document.getElementById("validation-form").addEventListener("submit", function(event) {
 	event.preventDefault();
 	
@@ -132,7 +126,7 @@ document.getElementById("validation-form").addEventListener("submit", function(e
 		interestError.textContent = "";
 	}
 	
-	// Prevent form submission if not valid
+	// Prevent form submission if not valid or valid
 	if (!isValid) {
         alert("Please correct the highlighted errors before submitting.");
         console.log("Form submission blocked due to validation errors.");
@@ -143,6 +137,7 @@ document.getElementById("validation-form").addEventListener("submit", function(e
     }
 });
 
+// Package list data 
 function renderDestinationList(destinations, containerId, itemTemplate) {
 	const destinationList = document.getElementById(containerId);
 
@@ -155,6 +150,7 @@ function renderDestinationList(destinations, containerId, itemTemplate) {
 	});
 	}
 
+// List item template
 const containerId = 'destinationList';
 const itemTemplate = `
 	<div class="our-package-items">
@@ -166,4 +162,5 @@ const itemTemplate = `
 	</div>
 `;
 
+// Run Package List
 renderDestinationList(destinations, containerId, itemTemplate);
