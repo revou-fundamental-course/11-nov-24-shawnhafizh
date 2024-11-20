@@ -339,3 +339,60 @@ footer p {
 .footer-description a {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 16px;
+    }
+
+    nav {
+        width: 50%;
+    }
+
+    .main-article {
+        padding: 32px;
+        display: block;
+    }
+
+    .banner-offer-container {
+        width: 100%;
+    }
+
+    .banner-container {
+        height: 600px;
+    }
+
+    .contact-us-container {
+        width: 100%;
+    }
+    
+    .our-package-article {
+        height: auto;
+        padding: 32px;
+    }
+
+    .our-package-header {
+        padding-bottom: 32px;
+    }
+
+    .our-package-items {
+        width: 100%;
+    }
+
+    .call-us-article {
+        padding: 32px;
+    }
+
+    .call-us-header {
+        width: 100%;
+    }
+
+    .call-us-content button {
+        width: 50%;
+        height: 40px;
+    }
+
+    .footer-description {
+        width: 45%;
+    }
+}
