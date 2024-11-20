@@ -31,7 +31,7 @@ const destinations = [
 	{ place: 'Bandung', description: 'Travel dan wisata di Bandung. Kunjungi cagar budaya dan kuliner menarik.' },
 	{ place: 'Surabaya', description: 'Travel dan wisata di Surabaya. Kunjungi cagar budaya dan kuliner menarik.' },
 	{ place: 'Yogyakarta', description: 'Travel dan wisata di Yogyakarta. Kunjungi cagar budaya dan kuliner menarik.' }
-];w.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLogo);
+];
 
 // Set navbar 'fixed' when scrolled off screen
 const navbar = document.querySelector('.main-header');
